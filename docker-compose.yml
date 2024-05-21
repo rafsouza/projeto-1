@@ -1,0 +1,14 @@
+services:
+  backend:
+    build: ./
+    restart: always
+    tty: true
+    ports:
+      - 80:80
+    networks:
+      - db-mysql
+    container_name: python_api
+
+networks:
+  db-mysql:
+    external: true

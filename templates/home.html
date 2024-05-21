@@ -1,0 +1,61 @@
+{% extends 'css/layout.html' %}
+
+{% block content %}
+  <div class=container">
+  
+  <h1 class="display-4 text-center mb-4"> Bem-vindo ao Sistema do Coletivo Morro das Panelas!</h1>
+     <div class="p-5 bg-danger"></div><br>
+    
+    <div class="container bg-info text-center mt-4 mb-4">
+      <div class="row">
+    <h4 style="font-family: 'Lucida Bright', Lucida Bright; font-weight: bold;">Selecione a opção desejada:</h4>
+        <p></p>
+
+    </div>
+    
+<table>
+  <tr>
+    <td class="p-5">
+  <h2> Produtos </h2>
+      <p></p>
+  <ul>
+    <li> <a href="/produto/read/1" class="button btn btn-lg big-font"> Listar produtos </a> </li> 
+    <p></p>
+    <li> <a href="/produto/create" class="button btn btn-lg big-font"> Cadastrar um produto </a> </li>
+    
+  </ul>
+  <br></td>
+
+    <td class="p-5">
+  <h2> Produtores</h2>
+  <p></p>
+  <ul>
+    <li> <a href="/produtor/read" class="button btn btn-lg big-font"> Listar produtores </a> </li>
+    <p></p>
+    <li> <a href="/produtor/create" class="button btn btn-lg big-font"> Cadastrar um produtor </a> </li>
+  </ul>
+  <br></td>
+  </tr>
+  <tr>
+    <td class="p-5">
+  <h2> Clientes </h2>
+   <p></p>   
+  <ul>
+    <li> <a href="/cliente/read" class="button btn btn-lg big-font"> Listar clientes </a> </li>
+    <p></p>
+    <li> <a href="/cliente/create" class="button btn btn-lg big-font"> Cadastrar um cliente </a> </li>
+  </ul>
+  <br></td>
+    <td class="p-5">
+  <h2> Pedidos </h2>
+    <p></p>  
+  <ul>
+    <li> <a href="/pedidos/read" class="button btn btn-lg big-font"> Administrar Pedidos </a> </li> 
+    <p></p>
+    <li> <a href="/pedidos/cliente" class="button btn btn-lg big-font"> Cadastrar um pedido </a> </li>
+  </ul>
+    </td>
+  </tr>
+</table>
+  </div>
+  {% endblock content %}

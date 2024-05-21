@@ -1,0 +1,22 @@
+{% extends 'css/layout.html' %}
+
+{% block content %}
+<div class="container">
+  <h1>Cadastro de clientes</h1>
+  <form method="post" action="/cliente/create">
+    <table>
+      <tr><td>ID do Cliente: </td> <td><input type="text" name="id" id="id" maxlength="100"></td></tr>
+      <tr><td>Nome: </td> <td><input type="text" name="nome_cl" id="nome_cl" maxlength="100"></td></tr>
+      <tr><td>Endereço: </td> <td><input type="text" name="endereco" id="endereco" maxlength="100"></td></tr>
+      <tr><td>Cidade: </td> <td><input type="text" name="cidade" id="cidade" maxlength="100"></td></tr>
+      <tr><td>Telefone: </td> <td><input type="text" name="telefone" id="telefone"></td></tr> 
+      <tr><td>E-mail: </td> <td><input type="text" name="email" id="email" maxlength="100"/></td></tr> 
+      <tr><td>Observações: </td> <td><input type="text" name="obs" id="obs" maxlength="128" placeholder="Até 128 caracteres"/></td></tr> 
+      <tr><td></td> <td><input type="submit" class="button" value="Cadastrar"></td></tr>
+    </table>
+  </form>
+<br>
+<br>
+<a href="/" class="button2"> Voltar ao menu inicial </a>
+</div>
+{% endblock content %}
