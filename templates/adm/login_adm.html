@@ -1,0 +1,19 @@
+{% extends 'css/layout.html' %}
+
+{% block content %}
+
+<div>
+  <h1> Efetuar Login - Administração </h1>
+  {# Aqui aparece uma mensagem só no código #}
+  {% if msg %}
+    <h5>{{msg}}</h5>
+  {% endif %}
+  <form method="post" action="">
+    <table>
+      <tr><td> <label> Usuário: </label> </td> <td> <input type="text" name="id" id="id" placeholder="Digite seu e-mail"></td></tr>
+      <tr> <td> <label> Senha: </label></td> <td> <input type="password"  name="senha" id="senha" placeholder="Senha"></td></tr>
+      <tr> <td> <input type="submit" class="button cadastrar" value="Entrar"></td></tr>
+    </table>
+  </form>
+</div>
+{% endblock content %}

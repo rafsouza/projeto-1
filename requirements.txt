@@ -1,0 +1,8 @@
+flask
+Flask-SQLAlchemy
+flask-migrate
+Flask-Script
+python-dotenv
+
+pytz
+xlsxwriter

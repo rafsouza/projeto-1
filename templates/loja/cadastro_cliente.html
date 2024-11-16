@@ -1,0 +1,32 @@
+{% extends 'css/layout.html' %}
+{% include 'loja/_navhome.html' %}
+{% block content %}
+<div class="container">
+    <h1>Cadastrar Novo Cliente</h1> {# id, nome_cl, endereco, cidade, telefone, email, obs, senha #}
+    <p> Campos com * são de preenchimento obrigatório</p>
+
+    {# Aqui aparece uma mensagem só no código #}
+    {% if msg %}
+    <font color="red"><h5>{{msg}}</h5></b></font> 
+    {% endif %}
+    <br>
+    
+    <form method="post" action="">
+      <table>
+        {# <tr><td><label>Identificação de usuário:</label> </td> <td> <input type="text" name="usuario" id="usuario" maxlength="100" placeholder="ID para login"></td></tr> #}
+        <tr> <td><label>Nome*:</label> </td> <td> <input type="text" name="nome" id="nome" maxlength="100" placeholder="Nome completo"></td></tr>
+        <tr> <td><label>Endereço*:</label> </td> <td> <input type="text" name="endereco" id="endereco" maxlength="100" placeholder="Rua, Número"></td></tr>
+        <tr> <td><label>Cidade*:</label> </td> <td> <input type="text" name="cidade" id="cidade" maxlength="100" placeholder="Cidade"></td></tr>
+        <tr> <td><label>Telefone*:</label> </td> <td> <input type="number" name="telefone" id="telefone" maxlength="100" placeholder="13 00000 0000"></td></tr>
+        <tr><td><label>E-mail*:</label> </td> <td><input type="text" name="email" id="email" maxlength="100" placeholder="nome@exemplo.com"></td></tr>
+        <tr> <td><label>Observações:</label> </td> <td> <input type="number" name="nome" id="nome" maxlength="128" placeholder="Detalhes "></td></tr>
+        <tr><td><label>Senha*:</label> </td> <td><input type="password" name="senha" id="senha" placeholder="Digite sua senha"></td></tr>
+        <tr><td> <label>Confirmar senha*:</label> </td> <td><input type="password" name="confirma" id="confirma" placeholder="Confirme sua senha"></td></tr>
+        <tr><td> </td> <td><input type="submit" class="button cadastrar" value="Cadastrar"></td></tr>
+      </table>
+    </form>
+  <br>
+  <br>
+  <a href="/" class="button2 voltar"> Voltar ao menu inicial </a>
+</div>
+{% endblock content %}

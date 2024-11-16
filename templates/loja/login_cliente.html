@@ -1,0 +1,25 @@
+{% extends 'css/layout.html' %}
+
+{% block content %}
+{% include 'loja/_navhome.html' %}
+
+<div>
+  <h1> Efetuar Login - Cliente </h1>
+  {# Aqui aparece uma mensagem só no código #}
+  {% if msg %}
+    <h5>{{msg}}</h5>
+  {% endif %}
+  <form method="post" action="">
+    <table>
+      <tr><td> <label> Usuário: </label> </td> <td> <input type="text" name="id" id="id" placeholder="Digite seu e-mail"></td></tr>
+      <tr> <td> <label> Senha: </label></td> <td> <input type="password"  name="senha" id="senha" placeholder="Senha"></td></tr>
+      <tr> <td> <input type="submit" class="button cadastrar" value="Entrar"></td></tr>
+    </table>
+  </form>
+  <br>
+  <br>
+  <h4>Caso não possua uma conta, clique no botão abaixo para criar uma</h4>
+  <br>
+  <a href="/loja/cadastro" class="button2">Cadastrar</a>
+</div>
+{% endblock content %}
