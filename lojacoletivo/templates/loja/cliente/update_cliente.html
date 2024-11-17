@@ -1,0 +1,81 @@
+{% extends 'css/layout.html' %}
+
+{% block content %}
+
+{% include 'loja/_navhome.html' %}
+
+<div class="container">
+    <h1><font color="#073">Atualizar conta - {{cl.nome_cl}}</font> </h1> {# id, nome_cl, endereco, cidade, telefone, email, obs, senha #}
+    <hr>
+ 
+    
+    {# Aqui aparece uma mensagem só no código #}
+    {% if msg %}
+    <br> <font color="red"><h5>{{msg}}</h5></b></font> <br>
+    {% endif %}
+
+
+     <br> <font color="red"><h5></h5>{% from "_formhelp.html" import render_field %}</h5></b></font> <br>
+
+   {% if modo=="1" %}
+    <h3><b>Atualizar dados</b></h3>
+    <p> Campos com * não pode ficar vazios</p>
+
+    <form method="post" action="">
+    <table>
+        {{ render_field(form.nome, class="form-control", value=cl.nome_cl ) }}
+        {{ render_field(form.endereco, class="form-control", value=cl.endereco ) }}
+        {{ render_field(form.cidade, class="form-control", value=cl.cidade) }}
+        {{ render_field(form.telefone, class="form-control", value=cl.telefone) }}
+        {{ render_field(form.email, class="form-control", value=cl.email) }}
+        {{ render_field(form.obs, class="form-control", placeholder="Condições de entrega, etc", value=cl.obs) }}
+        <!--input type="file" name="Foto"-->
+    
+    <tr><td></td> <td> <input type=submit value="Atualizar" class="button cadastrar"></td></tr>
+    </table>
+    </form>
+  
+
+    {% elif modo=="2" %}
+    <h3><b>Atualizar senha</b></h3>
+    <form method="post" action="">
+      <table>
+        {{ render_field(form2.senha, class="form-control") }}
+        {{ render_field(form2.confirma, class="form-control") }}
+      
+      <tr><td></td> <td> <input type=submit value="Atualizar" class="button cadastrar"></td></tr>
+      </table>
+    </form>
+
+    {% endif %}
+
+    {# 
+ <table>
+      <!--tr><td>Id do Cliente:</td> <td> {{cl.id}} </td></tr-->
+      <tr><td>Nome:</td> <td> {{cl.nome_cl}} </td></tr>
+      <tr><td>Endereço:</td> <td> {{cl.endereco}} </td></tr>
+      <tr><td>Cidade:</td> <td> {{cl.cidade}} </td></tr>
+      <tr><td>Telefone: </td> <td> {{cl.telefone}} </td></tr>
+      <tr><td>E-mail:</td> <td> {{cl.email}} </td></tr>
+      <tr><td>Observações:</td> <td> {{cl.obs}} </td></tr>
+      <!--tr><td>Senha:</td> <td> <font color="#888">"Visualização não disponível"</font>  </td></tr-->
+    </table>
+    <br><br>
+    <hr>
+    <br>
+    <table>
+      <tr><td><h3>Opções</h3></td></tr>
+      <tr>
+        <td><a href="#" class="button4 voltar"> Ver Pedidos </a></td>
+        <td><a href="#" class="button4 "> Atualizar Dados </a></td>
+        <td><a href="#" class="button4 voltar"> Atualizar Senha</a></td>
+      </tr>
+    </table>
+
+
+   #}
+<br>
+<hr>
+  <a href="/loja/cliente/conta/" class="button2 Voltar"> Voltar para a conta </a>
+</div>
+{% endblock content %}

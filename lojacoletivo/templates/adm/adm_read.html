@@ -1,0 +1,44 @@
+{% extends 'css/layout.html' %}
+
+{% block content %}
+<div class="container">
+<h1>Lista de Administradores Cadastrados</h1> 
+  <p></p>
+<h3> Opções :</h3>
+<a href="/adm/create" class=button > Cadastrar novo administrador </a><br>
+  <p></p>
+<a href="/adm/home" class=button > Voltar ao menu inicial </a><br>
+<br>
+{# <a href="/adm/gerar_excel" class=button4 > Baixar lista de produtores (Excel) </a><br> #}
+<br>
+<br> 
+
+<table class="table table-bordered table-stripped">
+  <thead>
+    <th>Nome</th>
+    <p></p>
+    {# <th>Produtos</th>
+     <p></p> #}
+    <th>Cadastro</th>
+     <p></p>
+    <th>Excluir</th>
+     <p></p>
+  </thead>
+  <p></p>
+
+  <tbody>
+    {% for p in adm %}
+    <tr>
+      <td>{{p.nome}}</td>
+      {# <td> <a href= "#" class=button2 > Incluir/Excluir </a> </td> /adm/registra/{{p.CPF}} #}
+       <p></p>
+      <td> <a href="#" class=button > Editar </a> </td> {# /adm/update/{{p.CPF}} #} 
+       <p></p>
+      <td> <a href="#" class=button3 > <font color="white"> Remover </a> </font></td>  {# /adm/delete/{{p.CPF}} #}
+   </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+  
+{% endblock content %}
