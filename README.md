@@ -1,4 +1,4 @@
-# Projeto integrador 1 e 2 - UNIVESP 
+# Projetos integradores 1 e 2 - UNIVESP 
 PJI 110: Sala 003 - Grupo 012
 PJI 240: Sala 002 - Grupo 020
 
