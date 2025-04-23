@@ -1,0 +1,11 @@
+==========  Novas funcionalidades ==========
+- Opções de pagamanto
+- Opçẽs de frete
+
+========== Pendências ==========
+- Corrigir produtos de cada produtor (não está adcionando)
+- Criação API de pagamentos 
+- Intrgração API com a loja virtual
+
+========== Coisas para perguntar na visita ==========
+- Opções de pagamento aparcen no carrinho ou fechamento do pedido?
