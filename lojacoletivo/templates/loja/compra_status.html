@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Status da Compra</title>
+  <style>
+    body { font-family: Arial; padding: 2rem; text-align: center; }
+    .success { color: green; }
+    .pending { color: orange; }
+    .failure { color: red; }
+  </style>
+</head>
+<body>
+  <h1 class="{{ status }}">{{ mensagem }}</h1>
+
+  {% if status == 'success' %}
+    <p>Obrigado por sua compra! Seu pedido está sendo processado.</p>
+  {% elif status == 'pending' %}
+    <p>Estamos aguardando a confirmação do seu pagamento.</p>
+  {% elif status == 'failure' %}
+    <p>Verifique os dados e tente novamente.</p>
+  {% endif %}
+
+  <a href="/">Voltar à loja</a>
+</body>
+</html>
