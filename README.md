@@ -1,6 +1,7 @@
 # Projetos integradores 1, 2 e 3 - UNIVESP 
 PJI 110: Sala 003 - Grupo 012
 PJI 240: Sala 002 - Grupo 020
+PJI 310: Sala 001 - Grupo 019
 
 Instituição:  Morro das Panelas - Peruíbe/SP 
 Datas dos projetos: 
