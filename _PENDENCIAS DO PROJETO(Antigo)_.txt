@@ -1,0 +1,39 @@
+Pendências:
+
+- Verificar erros de integridade do banco de dados quando há alterações
+    - Ao tentar excluir um cliente com pedido, ocorre um erro, e o db não permite a deleção do cliente. Quando exclui, gera uma exception ao buscar os clientes nas rotas de pedido
+    - Ao excluir um produto, não está sendo passado o valor Null para produto_id na tabela itens_pedido
+
+- Data e hora aparentam não estarem sendo registradas corretamente nos pedidos (aparenta ter diferenças em termos de minutos)
+
+
+
+Resolvidos:
+
+[OK] Cadastro do cliente: incluir um campo de "cidade" e um de "observações" (precisam saber a cidade do cliente)
+
+[OK] Incluir uma planilha do Excel só com os pedidos finalizados ( para fazer as entregas)
+
+[OK] ID do Cliente: aceitar letras e números (só está aceitando números agora)
+
+[OK] Campo de quantidade do Produto: aceitar valores decimais (só está aceitando inteiro agora)
+
+[OK] Em Pedidos, incluir campo de "observações"
+
+[OK] Remover a situação "para entrega" do pedido (simplificar o processo - menos cliques) 
+
+[OK] Incluir o botão de "arquivar"na tela de pedidos ( no local que fica o "avançar")
+
+[OK] Listar produtores nos pedidos (com a produto.id encontrar produtores.cpf e passar para o pedido; *exigencia do cliente)
+
+[OK] Criar a opção de download do db no formato do Excell (*exigencia do cliente) 
+
+[OK] Fazer alterações no estoque ao se passar um pedido de "em aberto" para "em separação" (remover quatidades correspondentes do estoque); e adicionar data_entrega nos pedidos finalizados (* exigencia do cliente)
+
+[OK] Colocar os preços do produto nos pedidos (incluir novo campo em itens_pedido, para não haver alteração no preço do pedido caso altere o preço na tabela de produtos)
+
+[OK] Separar produtos por categoria na tela de seleção dos pedidos 
+
+[OK] Alterações do status do pedido (em aberto - em separação - para entrega - finalizado - cancelado)
+
+[OK] Corrigir erros de diagramação (dealinhamento de alguns campos)

@@ -1,0 +1,41 @@
+{% extends 'css/layout.html' %} 
+
+{% block content %}
+<div>
+  {% include 'loja/_navhome.html' %}
+ <div class="container">
+
+    {% if cstatus == "approved" %} 
+
+    <h1>Compra efetuada! </h1><br><br>
+     <font color="#0D3"><h3>Seu pedido foi finalizado com sucesso!</h3></font> 
+    <br>
+    <h4>Nº do pedido: {{n}} </h4>
+    <p><hr></p>
+    <br>
+    <h4><b>Dados do Pagamento</b></h4>
+    <p>Forma de pagamento: {{payment_type}} </p>
+    <p>Pagamento N°: {{payment_id}} </p>
+    <p>ID do pagamento: {{preference_id}} </p>
+    <p>Status: Aprovado </p> 
+    <p><hr></p>
+
+    {% else %}
+    <font color="red"><h1> Falha no Pagamento </h1><br><br></font>  
+      <font color="orange"><h4>O pagamento NÃO pode ser efetuado.</h4></b></font>  
+      <p><b> Verifique seu pedido e tente novamente</b></p> 
+        
+      <p><hr></p>
+    {% endif %}
+    
+
+    <br>
+    <a href="/loja" class="button" > Voltar para a loja </a>
+    <br />
+<p></p>
+</div>
+
+
+  {% endblock content %}
+
+</div>
